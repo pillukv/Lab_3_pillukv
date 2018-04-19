@@ -1,0 +1,23 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "programming fundamentals II lab 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pillukv/Lab_3_pillukv.git"
+  },
+  "author": "Luke Pilon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pillukv/Lab_3_pillukv/issues"
+  },
+  "homepage": "https://github.com/pillukv/Lab_3_pillukv#readme",
+  "dependencies": {
+    "hapi": "^17.3.1",
+    "nodemon": "^1.17.3"
+  }
+}
