@@ -1,6 +1,8 @@
 'use strict';
 
 const Hapi=require('hapi');
+const vision=require('vision');
+const https=require('https');
 
 // Create a server with a host and port
 const server=Hapi.server({
@@ -29,17 +31,17 @@ server.route({
 });
 
 // Start the server
-async function start() {
+const start = async () => {
 
-    try {
-        await server.start();
-    }
-    catch (err) {
-        console.log(err);
-        process.exit(1);
-    }
+    await server.register(require('vision'));
 
-    console.log('Server running at:', server.info.uri);
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        relativeTo: __dirname,
+        path: 'templates'
+    });
 };
 
 start();
