@@ -20,13 +20,23 @@ server.route({
     }
 });
 
-//Add the content.html route
+//Add the precipitation.html route
 server.route({
     method:'GET',
-    path:'/content.html',
+    path:'/precipitation.html',
     handler:function (request,h) {
 
-        return '<h1>You have reached the content page</h1>';
+        return '<h1>You have reached the precipitation display page</h1>';
+    }
+});
+
+//Add the temperature.html route
+server.route({
+    method:'GET',
+    path:'/temperature.html',
+    handler:function (request,h) {
+
+        return '<h1>You have reached the temperature display page</h1>';
     }
 });
 
